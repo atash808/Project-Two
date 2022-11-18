@@ -9,8 +9,9 @@ import UIKit
 
 class secondViewController: UIViewController {
 
-    @IBOutlet var textField: UITextField!
+    @IBOutlet var weatherConverterTitle: UINavigationItem!
     
+    @IBOutlet var textField: UITextField!
     
     @IBOutlet var displayLabel: UILabel!
     override func viewDidLoad() {
@@ -27,12 +28,14 @@ class secondViewController: UIViewController {
     
     
     {
-        let userInputText = textField.text
-        displayLabel.text = userInputText
         
-        let _: Float = 50
-        //Formula: celsius = 5/9 * (fahrenheit - 32)
-        var _: Float
+        let fahrenheit: Float = 80
+        
+        var celsius: Float
+        
+        celsius = (fahrenheit - 32) * 5/9
+        
+        displayLabel.text = ("Today is \(celsius) degrees celsius")
         
     }
     

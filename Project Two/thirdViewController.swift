@@ -9,7 +9,9 @@ import UIKit
 
 class thirdViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var myBucketListArray = ["Visit Spain, Shark Dive, Create Mural, BA Degree, Snowboard Trip"]
+    @IBOutlet var bucketListTitle: UINavigationItem!
+    
+    var myBucketListArray = ["Visit Spain", "Shark Dive", "Create Mural", "BA Degree", "Snowboard Trip"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
